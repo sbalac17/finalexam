@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* Shivya Balachandran
+300 884 989 
+Final Exam 
+/*
+
 namespace COMP123_S2016_FinalExam
 {
   {
@@ -18,7 +23,7 @@ namespace COMP123_S2016_FinalExam
     * 
     * @class SplashForm
     */
-    public partial class SplashForm : GenerateNameForm
+    public partial class SplashForm : Form
     {
         /**
         * <summary>
@@ -33,7 +38,14 @@ namespace COMP123_S2016_FinalExam
 
             // loads all the names
             Console.WriteLine(Name.Length);
-        }
+
+         public Namess()
+    {
+
+
+    }
+}
+   
 
         /**
         * <summary>
@@ -46,7 +58,7 @@ namespace COMP123_S2016_FinalExam
         */
         private void Timer_Tick(object sender, EventArgs e)
         {
-            GenerateNameForm form = new GenerateNameForm();
+            Form form = new Form();
             form.Show();
 
             this.Close();
