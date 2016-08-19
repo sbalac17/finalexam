@@ -39,63 +39,49 @@ namespace COMP123_S2016_FinalExam
             // loads all the names
             Console.WriteLine(Name.Length);
 
-                /**
-        * <summary>
-        * This method creates the get and set for firstName and lastName 
-        * </summary>
-        * 
-        * @method Names
-        * @param {string firstName, string lastName} 
-        * @param {EventArgs} e
-        */
-
-         public static void Names (string firstName, string lastName)
-    { 
-
-        public string firstName;  
-        public string lastName   
+      
+    private void SplashForm_Load(object sender, EventArgs e)
     {
-        get
+
+    }
+}
+// this is for the properties for the splashform
+public void CreateMyBorderlessWindow()
+{
+    this.FormBorderStyle = FormBorderStyle.None;
+    this.MaximizeBox = false;
+    this.MinimizeBox = false;
+    this.StartPosition = FormStartPosition.CenterScreen;
+    // Remove the control box so the form will only display area.
+    this.ControlBox = false;
+}
+
+
+/**
+* <summary>
+* This event handler will show the selection form 
+* </summary>
+* 
+* @method Timer_Tick
+* @param {object} sender
+* @param {EventArgs} e
+*/
+private void Timer_Tick(object sender, EventArgs e)
         {
-            return firstName;
+    Form form = new Form; 
+    SplashScreen splashScreen = new SplashScreen;
+    form.Show();
+    splashScreen.Show(); 
+
+            this.Close()
+
         }
-        set
-        {
-            firstName = value;
-        }
-    
-      get
-        {
-            return LastName;
-        }
-     set
-        {
-            LastName = value;
-        }
-    
+
+private void Application_Launching(object sender, EventArgs e)
+{
+    System.Threading.Thread.Close(DateTime.Now.TimeOfDay.Seconds + 3000);
+}
     }
 }
 
 
-   
-
-        /**
-        * <summary>
-        * This event handler will show the selection form 
-        * </summary>
-        * 
-        * @method Timer_Tick
-        * @param {object} sender
-        * @param {EventArgs} e
-        */
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            Form form = new Form();
-            form.Show();
-
-            this.Close();
-        }
-    }
-}
-
-}
