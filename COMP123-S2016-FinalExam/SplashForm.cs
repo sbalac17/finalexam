@@ -39,12 +39,44 @@ namespace COMP123_S2016_FinalExam
             // loads all the names
             Console.WriteLine(Name.Length);
 
-         public Namess()
+                /**
+        * <summary>
+        * This method creates the get and set for firstName and lastName 
+        * </summary>
+        * 
+        * @method Names
+        * @param {string firstName, string lastName} 
+        * @param {EventArgs} e
+        */
+
+         public static void Names (string firstName, string lastName)
+    { 
+
+        public string firstName;  
+        public string lastName   
     {
-
-
+        get
+        {
+            return firstName;
+        }
+        set
+        {
+            firstName = value;
+        }
+    
+      get
+        {
+            return LastName;
+        }
+     set
+        {
+            LastName = value;
+        }
+    
     }
 }
+
+
    
 
         /**
