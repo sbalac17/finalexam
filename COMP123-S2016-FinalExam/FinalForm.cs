@@ -38,5 +38,11 @@ namespace COMP123_S2016_FinalExam
         {
             Application.Exit();
         }
+
+        private void FinalForm_Load(object sender, EventArgs e)
+        {
+            FirstNameLabel2.ListBox
+
+        }
     }
 }

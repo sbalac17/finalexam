@@ -20,6 +20,9 @@ namespace COMP123_S2016_FinalExam
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AbilityGeneratorForm());
+            // start the splashform
+            Application.Run(new SplashForm(SplashForm));
+
         }
     }
 }

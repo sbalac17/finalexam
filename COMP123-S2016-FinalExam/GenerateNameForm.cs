@@ -19,12 +19,12 @@ namespace COMP123_S2016_FinalExam
 
         private void GenerateNameForm_Load(object sender, EventArgs e)
         {
-
+            GenerateNames();
         }
         public static void GenerateNames()
         {
-            show.FirstNameListBox 
-                show.LastNameListBox
+            show.FirstNameListBox;
+            show.LastNameListBox;
         }
 
         private void FirstNameListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,6 +48,11 @@ namespace COMP123_S2016_FinalExam
 
         this.Close();
     }
-}
+
+        private void NextButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 }

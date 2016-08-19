@@ -36,11 +36,22 @@ namespace COMP123_S2016_FinalExam
         {
             InitializeComponent();
 
+
             // loads all the names
             Console.WriteLine(Name.Length);
 
       
     private void SplashForm_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void SplashForm_Load_1(object sender, EventArgs e)
+    {
+
+    }
+
+    private void timer1_Tick(object sender, EventArgs e)
     {
 
     }
@@ -67,16 +78,27 @@ public void CreateMyBorderlessWindow()
 * @param {EventArgs} e
 */
 private void Timer_Tick(object sender, EventArgs e)
-        {
-    Form form = new Form; 
-    SplashScreen splashScreen = new SplashScreen;
+{
+    Form form = new Form;
     form.Show();
-    splashScreen.Show(); 
+    this.Close();
 
-            this.Close()
+    SplashForm splashScreen = new SplashForm;
+    splashScreen.Show();
 
-        }
+    this.Close();
+}
+/**
+* <summary>
+* This event handler will show the splash form for 3 seconds  
+* </summary>
+* 
+* @method Application_Launching
+* @param {object} sender
+* @param {EventArgs} e
+*/
 
+    //this will allow for the splash screen to display for 3000
 private void Application_Launching(object sender, EventArgs e)
 {
     System.Threading.Thread.Close(DateTime.Now.TimeOfDay.Seconds + 3000);

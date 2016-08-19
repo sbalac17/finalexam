@@ -28,29 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.InsertingImage = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.InsertingImage)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashForm));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // InsertingImage
+            // pictureBox1
             // 
-            this.InsertingImage.Image = global::COMP123_S2016_FinalExam.Properties.Resources.splashSceen1;
-            this.InsertingImage.Location = new System.Drawing.Point(123, 39);
-            this.InsertingImage.Name = "InsertingImage";
-            this.InsertingImage.Size = new System.Drawing.Size(100, 50);
-            this.InsertingImage.TabIndex = 0;
-            this.InsertingImage.TabStop = false;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(109, 101);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // SplashForm
             // 
-            this.ClientSize = new System.Drawing.Size(584, 304);
-            this.ControlBox = false;
-            this.Controls.Add(this.InsertingImage);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "SplashForm";
-            this.Load += new System.EventHandler(this.SplashForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.InsertingImage)).EndInit();
+            this.Load += new System.EventHandler(this.SplashForm_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -58,5 +63,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox InsertingImage;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
